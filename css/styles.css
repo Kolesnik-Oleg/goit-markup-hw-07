@@ -16,7 +16,7 @@
     --backdrop:rgba(46, 47, 66, 0.4);
 }
 .container {
-    max-width: 428px;
+    max-width: 426px;
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
@@ -55,10 +55,6 @@ p,h1,h2,h3,h4,h5,h6 {
     background-color: var(--background-page);
     cursor: pointer;
 }
-.mobile-menu-footer {
-    margin-left: auto;
-    margin-right: auto;
-}
 .mobile-menu-open 
 .close-mobile-modal {
     stroke: var(--title-text-color);
@@ -82,7 +78,8 @@ p,h1,h2,h3,h4,h5,h6 {
     overflow-y: scroll;
 } 
 .mobile-container {
-    text-align: center;
+    position: relative;
+    max-width: 428px;
     padding: 80px 35px 40px 40px;
     display: flex;
     flex-direction: column;
@@ -247,7 +244,6 @@ p,h1,h2,h3,h4,h5,h6 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 432px;
     max-width: 1440px;
     text-align: center;
 }
@@ -385,7 +381,7 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
 .items>.item:not(:last-child) {
     margin-bottom: 72px;
 }
-.caption {
+.advantages-caption {
     text-align: center;
     margin-top: 0;
     margin-bottom: 8px;
@@ -417,6 +413,12 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
     gap: 24px;
     padding: 0;
     margin-top: 8px;
+}
+.team-caption {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em
 }
 .social-link {
     width: 40px;

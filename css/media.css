@@ -16,8 +16,15 @@
     .container-hero {
             background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7),
                     rgba(46, 47, 66, 0.7)), url(../images/tabl-hero.jpg);
-            height: 436px;
         }
+    @media screen and (min-device-pixel-ratio: 2) and (min-width: 428px),
+    screen and (min-resolution: 192dpi) and (min-width: 428px),
+    screen and (min-resolution: 2dppx) and (min-width: 428px) {
+        .container-hero {
+            background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7),
+            rgba(46, 47, 66, 0.7)), url(../images/tabl-hero-bg@2x.jpg);
+        }
+    }
 }
 @media screen and (min-width: 768px) {
     .container {
@@ -32,7 +39,7 @@
    screen and (min-resolution: 2dppx) and (min-width: 768px) {
        .container-hero {
            background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7),
-                   rgba(46, 47, 66, 0.7)), url(../images/tabl-hero-bg@2x.jpg);
+                   rgba(46, 47, 66, 0.7)), url(../images/hero-desktop-bg@2x.jpg);
        }
    }
     .hero {
@@ -51,7 +58,7 @@
     .item>.current {
         color: var(--hover-button);
     }
-    .contact .item {
+    .contact .contact-item:not(:last-child) {
         margin-bottom: 12px;
     }
     .contact-mail,.contact-number {
@@ -73,7 +80,7 @@
         gap: 72px 24px;
         justify-content: space-between;
     }
-    .caption.title-color {
+    .advantages-caption.title-color {
         text-align: left;
     }
     .items>.item {
@@ -148,30 +155,21 @@
     .container-hero {
         padding-top: 188px;
         padding-bottom: 188px;
-        height: 600px;
     }
-        @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
-        screen and (min-resolution: 192dpi) and (min-width: 1200px),
-        screen and (min-resolution: 2dppx) and (min-width: 1200px) {
-            .container-hero {
-                background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7),
-                        rgba(46, 47, 66, 0.7)), url(../images/hero-desktop-bg@2x.jpg);
-            }
-        }
     .contact {
         display: flex;
     }
-    .contact>.item:not(:last-child) {
+    .contact>.contact-item:not(:last-child) {
         margin-right: 40px;
     }
-    .contact .item {
+    .contact>.current-contact:not(:last-child) {
         margin-bottom: 0px;
     }
     .contact-mail,.contact-number {
         display: block;
         padding: 24px 0px;
         color: var(--primary-text-color);
-        font-size: 14px;
+        font-size: 16px;
         line-height: 1.5;
         font-style: normal;
         letter-spacing: 0.02em;
@@ -189,12 +187,12 @@
         line-height: 1.07;
         margin-bottom: 48px;
     } 
-    .caption {
+    .advantages-caption {
         font-size: 20px;
         line-height: 1.2;
     }
     .items .text {
-        font-weight: 400px;
+        font-weight: 400;
     }
     .items {
         display: flex;
